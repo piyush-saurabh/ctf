@@ -6,3 +6,6 @@ This python script helps to interact with the network services. It is as BOF scr
 
 #calamity.py
 This is a buffer overflow exploit script using ret2libc method to "execl" function and get the shell using wrapper(wrapper.c).
+
+#wrapper.c
+This is a wrapper function which helps in privilege escalation if setuid bit is set. "system" drops the effective user id so it is important to use a wrapper function to explicitly set the "setuid" and "setgid" bits before opening a shell
